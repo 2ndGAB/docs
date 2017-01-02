@@ -464,7 +464,7 @@ suivant::
 
     $query->select([
         'number_published' => $query->func()->sum($publishedCase),
-        'number_unpublished' => $query->func()->sum($unpublishedCase)
+        'number_unpublished' => $query->func()->sum($notPublishedCase)
     ])
     ->group('published');
 
