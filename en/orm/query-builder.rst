@@ -1130,7 +1130,7 @@ additional joins with the query builder::
             'table' => 'comments',
             'alias' => 'c',
             'type' => 'LEFT',
-            'conditions' => 'c.article_id = articles.id',
+            'conditions' => 'c.article_id = Articles.id',
         ]);
 
 You can append multiple joins at the same time by passing an associative array
@@ -1142,12 +1142,12 @@ with multiple joins::
             'c' => [
                 'table' => 'comments',
                 'type' => 'LEFT',
-                'conditions' => 'c.article_id = articles.id',
+                'conditions' => 'c.article_id = Articles.id',
             ],
             'u' => [
                 'table' => 'users',
                 'type' => 'INNER',
-                'conditions' => 'u.id = articles.user_id',
+                'conditions' => 'u.id = Articles.user_id',
             ]
         ]);
 
@@ -1163,7 +1163,7 @@ conditions can also be expressed as an array of conditions::
                 'conditions' => [
                     'c.created >' => new DateTime('-5 days'),
                     'c.moderated' => true,
-                    'c.article_id = articles.id'
+                    'c.article_id = Articles.id'
                 ]
             ],
         ], ['c.created' => 'datetime', 'c.moderated' => 'boolean']);
@@ -1200,7 +1200,7 @@ defining your ``Connection``, join conditions between table fields should be set
                 'table' => 'comments',
                 'type' => 'LEFT',
                 'conditions' => [
-                    'c.article_id' => new \Cake\Database\Expression\IdentifierExpression('articles.id')
+                    'c.article_id' => new \Cake\Database\Expression\IdentifierExpression('Articles.id')
                 ]
             ],
         ]);
