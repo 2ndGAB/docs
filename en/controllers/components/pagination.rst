@@ -285,6 +285,8 @@ block and take appropriate action when a ``NotFoundException`` is caught::
             $this->paginate();
         } catch (NotFoundException $e) {
             // Do something here like redirecting to first or last page.
+            // For example:
+            // $this->redirect(['action' => 'index', 'page' => 1]);
             // $this->request->getParam('paging') will give you required info.
         }
     }
