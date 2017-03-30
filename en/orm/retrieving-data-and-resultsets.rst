@@ -578,7 +578,7 @@ This also works for pagination at the Controller level::
     When you limit the fields that are fetched from an association, you **must**
     ensure that the foreign key columns are selected. Failing to select foreign
     key fields will cause associated data to not be present in the final result.
-
+**Clarify the explanation bellow**
 It is also possible to restrict deeply-nested associations using the dot
 notation::
 
