@@ -669,9 +669,7 @@ validation it will automatically be removed from the data array and not be
 copied into the entity. This is to prevent inconsistent data from entering the
 entity object.
 
-Moreover, the data in ``beforeMarshal`` is a copy of the passed data. This is
-because it is important to preserve the original user input, as it may be used
-elsewhere.
+The data in ``beforeMarshal`` is the passed data. So you can modify it before it's patched in the entity.
 
 Validating Data Before Building Entities
 ----------------------------------------
